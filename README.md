@@ -76,7 +76,7 @@ immich:
 
 ### ESP32-C6
 
-Connect the EPD, ESP32-C6, Li-Po battery, and setting button according to the correct wiring configuration. Then, upload the Arduino code from the project directory to the ESP32-C6. On the first boot, connect to the ESP32-C6’s Wi-Fi hotspot to configure Wi-Fi and the Immich server. You can re-enter the configuration page later by short-circuiting the setting button and rebooting.
+Connect the EPD, ESP32-C6, Li-Po battery, and setting button according to the correct wiring configuration. Then, upload the Arduino code from the project directory to the ESP32-C6. On the first boot, connect to the ESP32-C6’s Wi-Fi hotspot(ESP32_ePAPER) to configure Wi-Fi and the Immich server(container's url /w /download domain, eg. http:192.168.100.10:15151/download). You can re-enter the configuration page later by short-circuiting the setting button and rebooting.
 
 ## License
 
