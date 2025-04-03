@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <SPI.h>
 #include <HTTPClient.h>
-#include "epd7in3e.h"
+#include "epd7in3f.h"
 #include "FS.h"
 #include <ArduinoJson.h>
 // #include "SimpleWiFiManager.h"
@@ -386,7 +386,7 @@ public:
     if (shouldEnterConfigMode())
     {
       Serial.println(F("Config button pressed, entering config mode..."));
-      epd.Clear(EPD_7IN3E_WHITE);
+      epd.Clear(EPD_7IN3F_WHITE);
       // epd.Sleep();
 
       bool res = WifiCaptivePortal.startPortal();
@@ -396,7 +396,7 @@ public:
         return true;
       }
       // else {
-      //   epd.Clear(EPD_7IN3E_WHITE);
+      //   epd.Clear(EPD_7IN3F_WHITE);
       //   epd.Sleep();
       //   return false;
       // }
@@ -412,7 +412,7 @@ public:
         return true;
       }
       // else {
-      //   epd.Clear(EPD_7IN3E_WHITE);
+      //   epd.Clear(EPD_7IN3F_WHITE);
       //   epd.Sleep();
       // }
     }
@@ -426,7 +426,7 @@ public:
         return true;
       }
       //   if (!res) {
-      //     epd.Clear(EPD_7IN3E_WHITE);
+      //     epd.Clear(EPD_7IN3F_WHITE);
       //     epd.Sleep();
     }
     // }
@@ -482,7 +482,7 @@ public:
   {
     epd.Init();
     delay(1000);
-    epd.Clear(EPD_7IN3E_WHITE);
+    epd.Clear(EPD_7IN3F_WHITE);
     epd.Sleep();
   }
 };

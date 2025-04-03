@@ -2,6 +2,8 @@
 
 - **This project is currently a Work in Progress (WIP)!**
 
+This fork adapts for the ACeP 7-colour eInk display - epd7in3f.
+
 This project leverages **Immich** as a service for organizing albums and photos. Photos intended for display are grouped into specific albums, and a FLASK server hosted on a NAS or cloud server handles image cropping and editing before sending them to the ESP32. Since the ESP32 remains in deep sleep most of the time, and all image processing is handled by the server, the EPD updates photos very quickly, typically within 15 seconds. This significantly reduces power consumption.
 
 ## Features

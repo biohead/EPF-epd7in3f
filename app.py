@@ -78,14 +78,15 @@ ALLOWED_EXTENSIONS = {'.jpeg', '.raw', '.jpg', '.bmp', '.dng', '.heic', '.arw', 
 os.makedirs(photodir, exist_ok=True)
 register_heif_opener()
 
-# Palltte only for WaveShare 7.5inch Spectra-E6 e-Paper
+# Palltte only for WaveShare 7.5inch ACeP e-Paper
 palette = [
-    (0, 0, 0),
-    (255, 255, 255),
-    (255, 243, 56),
-    (191, 0, 0),
-    (100, 64, 255),
-    (67, 138, 28)
+    (0, 0, 0), #Black
+    (255, 255, 255), #White
+    (67, 138, 28), #Green
+    (100, 64, 255), #Blue
+    (191, 0, 0), #Red
+    (255, 243, 56), #Yellow
+    (232, 126 ,0) #Orange
 ]
 
 last_battery_voltage = 0
@@ -209,12 +210,13 @@ def scale_img_in_memory(image, target_width=800, target_height=480, bg_color=(25
     
     # Palette definition (matching previous quantization logic)
     palette = [
-        0, 0, 0,         # Black
-        255, 255, 255,   # White
+        0, 0, 0,        # Black
+        255, 255, 255,  # White
+        0, 255, 0,      # Green
+        0, 0, 255,      # Blue
+        255, 0, 0,      # Red
         255, 255, 0,    # Yellow
-        255, 0, 0,       # Deep Red
-        0, 0, 255,    # Blue
-        0, 255, 0      # Green
+        255, 165, 0     # Orange
     ]
     
     # Prepare palette image (similar to previous code)
