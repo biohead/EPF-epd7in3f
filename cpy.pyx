@@ -113,12 +113,13 @@ def convert_image(input_image, preview_path=None, dithering_strength=1.0):
     cdef np.ndarray[np.uint8_t, ndim=3] img_array = np.array(input_image, dtype=np.uint8)
     
     cdef double[:, :] epd_colors = np.array([
-        [0, 0, 0],
-        [1, 1, 1],
-        [1, 1, 0],
-        [1, 0, 0],
-        [0, 0, 1],
-        [0, 1, 0],
+        [0, 0, 0], # Black
+        [1, 1, 1], # White
+        [0, 1, 0], # Green
+        [0, 0, 1], # Blue
+        [1, 0, 0], # Red
+        [1, 1, 0], # Yellow
+        [1, 0.647, 0], # Orange
     ], dtype=np.float64)
     
     # Prepare output arrays

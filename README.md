@@ -47,7 +47,7 @@ $ git clone https://github.com/jwchen119/epf.git
 $ docker build -t jwchen119/epf .
 ```
 
-### Download Precompiled Docker Image
+### Download Precompiled Docker Image - NOT FOR EPD7IN3F!!!
 
 If you prefer not to build the image yourself, you can download the precompiled image from [DockerHub](https://hub.docker.com/r/jwchen119/epf):
 
