@@ -164,7 +164,7 @@ def depalette_image(pixels, palette):
     palette_array = np.array(palette)
     diffs = np.sqrt(np.sum((pixels[:, :, None, :] - palette_array[None, None, :, :]) ** 2, axis=3))
     indices = np.argmin(diffs, axis=2)
-    indices[indices > 3] += 1  # Simulate the code from the C
+    #indices[indices > 3] += 1  # Simulate the code from the C
     return indices
 
 def scale_img_in_memory(image, target_width=800, target_height=480, bg_color=(255, 255, 255)):

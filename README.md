@@ -27,7 +27,7 @@ Mostly modifieded from TRMNL WiFiCaptive[https://github.com/usetrmnl/firmware/tr
 ## Components
 
 - [FireBeetle 2 ESP32-C6](https://www.dfrobot.com/product-2771.html)
-- [7.3-inch E Ink Spectra 6 (E6) Full Color E-Paper Display Module + HAT](https://www.waveshare.com/7.3inch-e-paper-hat-e.htm)
+- [7.3-inch E Ink ACeP 7-Color E-Paper Display Module + HAT](https://www.waveshare.com/7.3inch-e-paper-hat-f.htm)
 - Picture frame: A standard picture frame that accommodates the e-paper frame.
 - Li-Po battery with PH2.0 header
 - Simple button for wake and setting
@@ -37,14 +37,14 @@ Mostly modifieded from TRMNL WiFiCaptive[https://github.com/usetrmnl/firmware/tr
 ### Clone the Repository
 
 ```bash
-$ git clone https://github.com/jwchen119/epf.git
+$ git clone https://github.com/biohead/epf.git
 ```
 
 ### Manually Build Docker Image
 
 ```bash
-$ git clone https://github.com/jwchen119/epf.git
-$ docker build -t jwchen119/epf .
+$ git clone https://github.com/biohead/epf.git
+$ docker build -t biohead/epf .
 ```
 
 ### Download Precompiled Docker Image - NOT FOR EPD7IN3F!!!
@@ -60,7 +60,7 @@ docker pull jwchen119/epf
 Create a container from the image. Don’t forget to edit your Immich API key.
 
 ```bash
-$ docker run --name epf -e IMMICH-API-KEY='<replace-your-immich-api-key>' -d -p <replace-port>:5000 jwchen119/epf
+$ docker run --name epf -e IMMICH-API-KEY='<replace-your-immich-api-key>' -d -p <replace-port>:5000 biohead/epf
 ```
 
 ### Configure `config.yaml` (no longer needed, configure the settings directly from webpage)
@@ -89,8 +89,8 @@ To run the code follow the following steps:
 
 1. Install and set up Arduino IDE
 2. Connect your ESP32-C6
-3. Rename the Arduino folder from the repo to `epd7in3e`
-4. Open the `epd7in3e.ino` file
+3. Rename the Arduino folder from the repo to `epd7in3f`
+4. Open the `epd7in3f.ino` file
 5. Install following libraries from Arduino library manager:
   5-1. Arduinojson
   5-2. Async TCP
